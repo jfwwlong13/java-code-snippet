@@ -9,20 +9,27 @@ import static org.junit.Assert.assertEquals;
 @RunWith(mockit.integration.junit4.JMockit.class)
 public class JMockit {
 
+    private static final Clothes CLO = new Clothes("coat", "shoe");
+
     @Tested
     private Student student;
 
     @Injectable private String name = "xiong";
     @Injectable private int size = 12;
     @Injectable private int age = 28;
-    @Injectable private Clothes clothes = new Clothes("coat", "shoes");
+    @Injectable private Clothes clothes = CLO;
 
     class ExampleClass extends MockUp<App> {
-            @Mock
-            public final String getGreeting() {
-                return "fake";
-            }
+        @Mock
+        private String addWord() {
+            return "fake";
         }
+    }
+
+    @Test
+    public void testInject() {
+        System.out.println(student);
+    }
 
 
     @Test
@@ -42,10 +49,11 @@ public class JMockit {
     }
 
     @Test
-    public void testFake(@Mocked App app) {
-
+    public void testFake() {
+        App app = new App();
         new ExampleClass();
-        assertEquals("fake", app.getGreeting());
+        System.out.println(app.getGreeting());
+        System.out.println(app.out());
     }
 
     @Test

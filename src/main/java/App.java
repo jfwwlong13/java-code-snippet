@@ -5,11 +5,19 @@ public class App {
     private String s;
 
     public final String getGreeting() {
-        return "Hello world.";
+        return "Hello world." + addWord();
+    }
+
+    public String out() {
+        return "out";
     }
 
     public static String shout(final String str) {
         return str + "_shout";
+    }
+
+    private String addWord() {
+        return "addword";
     }
 
     public static void main(String[] args) {
