@@ -4,8 +4,12 @@
 public class App {
     private String s;
 
-    public String getGreeting() {
+    public final String getGreeting() {
         return "Hello world.";
+    }
+
+    public static String shout(final String str) {
+        return str + "_shout";
     }
 
     public static void main(String[] args) {
