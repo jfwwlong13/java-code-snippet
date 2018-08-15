@@ -20,8 +20,8 @@ public class StringsExplained {
                 .split("foo,bar,,   qux");
         System.out.println(split);
         // CharMatcher
-        String abc123ASD = CharMatcher.javaDigit().or(CharMatcher.javaUpperCase()).retainFrom("abc123ASD as1");
-        System.out.println(abc123ASD);
+      //  String abc123ASD = CharMatcher.javaDigit().or(CharMatcher.javaUpperCase()).retainFrom("abc123ASD as1");
+     //   System.out.println(abc123ASD);
         // Charsets. Deprecated, should use Java's StandardCharsets
         byte[] bytes = "张炯熊".getBytes(Charsets.UTF_8);
         byte[] bytes_java = "张炯熊".getBytes(StandardCharsets.UTF_8);

@@ -1,6 +1,6 @@
 package guava.utilities;
 
-import com.google.common.base.MoreObjects;
+//import com.google.common.base.MoreObjects;
 import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 
@@ -14,7 +14,7 @@ public class UsingAndAvoidingNullExplained {
         System.out.println(possible.isPresent());
         System.out.println(possible.get());
 
-        System.out.println(MoreObjects.firstNonNull(null, "not null"));
+    //    System.out.println(MoreObjects.firstNonNull(null, "not null"));
 
         System.out.println(Strings.emptyToNull(""));
         System.out.println(Strings.emptyToNull(null));

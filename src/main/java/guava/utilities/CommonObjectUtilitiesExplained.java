@@ -1,6 +1,6 @@
 package guava.utilities;
 
-import com.google.common.base.MoreObjects;
+//import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.ComparisonChain;
 
@@ -19,9 +19,9 @@ public class CommonObjectUtilitiesExplained {
         //Note: The newly introduced Objects class in JDK 7 provides the equivalent Objects.hash(Object...).
         System.out.println(Objects.hashCode("1", "2", "3"));
 
-        String s = MoreObjects.toStringHelper(CommonObjectUtilitiesExplained.class)
-                .add("x", 1).add("y", "22").toString();
-        System.out.println(s);
+        //String s = MoreObjects.toStringHelper(CommonObjectUtilitiesExplained.class)
+            //    .add("x", 1).add("y", "22").toString();
+        //System.out.println(s);
 
         System.out.println(ComparisonChain.start().compare("a", "b").compare(2, 1).result());
         System.out.println(ComparisonChain.start().compare("b", "b").compare(2, 1).result());
