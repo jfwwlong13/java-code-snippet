@@ -7,7 +7,9 @@ public class Regex {
 
     public static void main(final String[] args) {
         pattern1();
+        System.out.println("===================");
         pattern2();
+        System.out.println("===================");
         pattern3();
     }
 
@@ -28,7 +30,7 @@ public class Regex {
 
     private static void pattern3() {
         final Pattern pattern = Pattern.compile("asdf.*");
-        final Matcher matcher = pattern.matcher("asdfqwers");
+        final Matcher matcher = pattern.matcher("asdfasdf");
         System.out.println(matcher.matches());
         System.out.println(matcher.group());
     }

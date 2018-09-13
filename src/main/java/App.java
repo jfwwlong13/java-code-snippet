@@ -20,7 +20,8 @@ public class App {
         return "addword";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        App app = (App) Class.forName("App").newInstance();
+        System.out.println(app.addWord());
     }
 }
